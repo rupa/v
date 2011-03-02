@@ -20,7 +20,7 @@ DESCRIPTION
 
 
 OPTIONS
-       -a           don't hide deleted files
+       -a           don't skip deleted files
        -l           show a list rather than editing the most recent match.
        -[0-9]       edit nth most recent file
        --debug      dry run
