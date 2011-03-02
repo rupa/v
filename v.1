@@ -1,0 +1,37 @@
+.TH V "1" "February 2011" "v" "User Commands"
+
+.SH NAME
+v \- z for vim
+
+.SH SYNOPSIS
+v [\-a] [\-l] [\-[0\-9]] [\-\-debug] [\-\-help] [regex1 regex2 ... regexn]
+
+.SH AVAILABILITY
+bash, zsh, vim
+
+.SH DESCRIPTION
+\fBv\fR uses viminfo's list of recently edited files to open one quickly no
+matter where you are in the filesystem.
+
+.SH OPTIONS
+\fB\-a\fR           don't hide deleted files
+.br
+\fB\-l\fR           show a list rather than editing the most recent match.
+.br
+\fB\-[0\-9]\fR       edit nth most recent file
+.br
+\fB\--debug\fR      dry run
+.br
+\fB\--help\fR       show a brief help message
+
+.SH EXAMPLES
+\fBv\fR             reopen the last edited file
+.br
+\fBv -2\fR          edit next to last file
+.br
+\fBv foo bar\fR     edit file matching foo and bar.
+
+.SH SEE ALSO
+vim(1)
+.P
+Please file bugs at https://github.com/rupa/v/
