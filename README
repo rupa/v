@@ -1,0 +1,43 @@
+V(1)                             User Commands                            V(1)
+
+
+
+NAME
+       v - z for vim
+
+
+SYNOPSIS
+       v [-a] [-l] [-[0-9]] [--debug] [--help] [regex1 regex2 ... regexn]
+
+
+AVAILABILITY
+       bash, zsh, vim
+
+
+DESCRIPTION
+       v  uses  viminfo's list of recently edited files to open one quickly no
+       matter where you are in the filesystem.
+
+
+OPTIONS
+       -a           don't hide deleted files
+       -l           show a list rather than editing the most recent match.
+       -[0-9]       edit nth most recent file
+       --debug      dry run
+       --help       show a brief help message
+
+
+EXAMPLES
+       v             reopen the last edited file
+       v -2          edit next to last file
+       v foo bar     edit file matching foo and bar.
+
+
+SEE ALSO
+       vim(1)
+
+       Please file bugs at https://github.com/rupa/v/
+
+
+
+v                                February 2011                            V(1)
