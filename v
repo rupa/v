@@ -18,6 +18,11 @@ for x; do case $x in
 esac; shift; done
 set -- $fnd
 
+[ -f "$1" ] && {
+    "$vim" "$1"
+    exit
+}
+
 while read line; do
     [ "${line:0:1}" = ">" ] || continue
     fl=${line:2}
