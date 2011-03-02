@@ -18,23 +18,31 @@ DESCRIPTION
        v  uses  viminfo's list of recently edited files to open one quickly no
        matter where you are in the filesystem.
 
+       By default, it will open the most recently edited file matching all  of
+       the provided regular expressions.
+
 
 OPTIONS
-       -a           don't skip deleted files
-       -l           show a list rather than editing the most recent match.
-       -[0-9]       edit nth most recent file
-       --debug      dry run
-       --help       show a brief help message
+       -a        don't skip deleted files
+       -l        when multiple matches, show a list
+       -[0-9]    edit nth most recent file
+       --debug   dry run
+       --help    show a brief help message
 
 
 EXAMPLES
-       v             reopen the last edited file
-       v -2          edit next to last file
-       v foo bar     edit file matching foo and bar.
+       v         reopen the last edited file
+       v -2      edit next to last file
+       v foo bar edit file matching foo and bar.
+
+
+NOTES
+       Shell  variables, such as $, must be escaped if used in regular expres‐
+       sions.
 
 
 SEE ALSO
-       vim(1)
+       vim(1), regex(7)
 
        Please file bugs at https://github.com/rupa/v/
 

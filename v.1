@@ -12,26 +12,32 @@ bash, zsh, vim
 .SH DESCRIPTION
 \fBv\fR uses viminfo's list of recently edited files to open one quickly no
 matter where you are in the filesystem.
+.P
+By default, it will open the most recently edited file matching all of the
+provided regular expressions.
 
 .SH OPTIONS
-\fB\-a\fR           don't skip deleted files
+\fB\-a\fR        don't skip deleted files
 .br
-\fB\-l\fR           show a list rather than editing the most recent match.
+\fB\-l\fR        when multiple matches, show a list
 .br
-\fB\-[0\-9]\fR       edit nth most recent file
+\fB\-[0\-9]\fR    edit nth most recent file
 .br
-\fB\--debug\fR      dry run
+\fB\--debug\fR   dry run
 .br
-\fB\--help\fR       show a brief help message
+\fB\--help\fR    show a brief help message
 
 .SH EXAMPLES
-\fBv\fR             reopen the last edited file
+\fBv\fR         reopen the last edited file
 .br
-\fBv -2\fR          edit next to last file
+\fBv -2\fR      edit next to last file
 .br
-\fBv foo bar\fR     edit file matching foo and bar.
+\fBv foo bar\fR edit file matching foo and bar.
+
+.SH NOTES
+Shell variables, such as $, must be escaped if used in regular expressions.
 
 .SH SEE ALSO
-vim(1)
+vim(1), regex(7)
 .P
 Please file bugs at https://github.com/rupa/v/

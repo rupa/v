@@ -37,9 +37,7 @@ while read line; do
 done < "$viminfo"
 
 if [ "$edit" ]; then
-    echo $edit
     resp=${files[$edit]}
-    echo $resp
 elif [ "$i" = 1 -o "$list" = "" ]; then
     resp=${files[1]}
 elif [ "$i" ]; then 
