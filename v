@@ -5,7 +5,7 @@ viminfo=~/.viminfo
 
 usage="$(basename $0) [-a] [-l] [-[0-9]] [--debug] [--help] [regexes]"
 
-[ $1 ] || edit=1
+[ $1 ] || list=1
 
 for x; do case $x in
     -a) deleted=1;;

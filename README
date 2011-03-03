@@ -1,4 +1,4 @@
-V(1)                             User Commands                            V(1)
+V(1)                               User Commands                               V(1)
 
 
 
@@ -15,11 +15,11 @@ AVAILABILITY
 
 
 DESCRIPTION
-       v  uses  viminfo's list of recently edited files to open one quickly no
-       matter where you are in the filesystem.
+       v uses viminfo's list of recently edited files to open one quickly no matter
+       where you are in the filesystem.
 
-       By default, it will open the most recently edited file matching all  of
-       the provided regular expressions.
+       By default, it will open the most recently edited file matching all  of  the
+       provided regular expressions.
 
 
 OPTIONS
@@ -31,14 +31,13 @@ OPTIONS
 
 
 EXAMPLES
-       v         reopen the last edited file
-       v -2      edit next to last file
+       v         list all files
+       v -1      reopen most recently edited file
        v foo bar edit file matching foo and bar.
 
 
 NOTES
-       Shell  variables, such as $, must be escaped if used in regular expres‐
-       sions.
+       Shell variables, such as $, must be escaped if used in regular expressions.
 
 
 SEE ALSO
@@ -48,4 +47,4 @@ SEE ALSO
 
 
 
-v                                February 2011                            V(1)
+v                                  February 2011                               V(1)
