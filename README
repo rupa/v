@@ -23,17 +23,18 @@ DESCRIPTION
 
 
 OPTIONS
-       -a        don't skip deleted files
-       -l        when multiple matches, show a list
-       -[0-9]    edit nth most recent file
-       --debug   dry run
-       --help    show a brief help message
+       -a           don't skip deleted files
+       -l           when multiple matches, show a list
+       -[0-9]       edit nth most recent file
+       --debug      dry run
+       --help       show a brief help message
 
 
 EXAMPLES
-       v         list all files
-       v -1      reopen most recently edited file
-       v foo bar edit file matching foo and bar.
+       v            list and choose from all files
+       v -1         reopen most recently edited file
+       v foo bar    edit first file matching foo and bar
+       v -l foo bar list and choose files matching foo and bar
 
 
 NOTES

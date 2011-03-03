@@ -17,22 +17,24 @@ By default, it will open the most recently edited file matching all of the
 provided regular expressions.
 
 .SH OPTIONS
-\fB\-a\fR        don't skip deleted files
+\fB\-a\fR           don't skip deleted files
 .br
-\fB\-l\fR        when multiple matches, show a list
+\fB\-l\fR           when multiple matches, show a list
 .br
-\fB\-[0\-9]\fR    edit nth most recent file
+\fB\-[0\-9]\fR       edit nth most recent file
 .br
-\fB\--debug\fR   dry run
+\fB\--debug\fR      dry run
 .br
-\fB\--help\fR    show a brief help message
+\fB\--help\fR       show a brief help message
 
 .SH EXAMPLES
-\fBv\fR         list all files
+\fBv\fR            list and choose from all files
 .br
-\fBv -1\fR      reopen most recently edited file
+\fBv -1\fR         reopen most recently edited file
 .br
-\fBv foo bar\fR edit file matching foo and bar.
+\fBv foo bar\fR    edit first file matching foo and bar
+.br
+\fBv -l foo bar\fR list and choose files matching foo and bar
 
 .SH NOTES
 Shell variables, such as $, must be escaped if used in regular expressions.
