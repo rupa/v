@@ -1,4 +1,4 @@
-V(1)                               User Commands                               V(1)
+V(1)                             User Commands                            V(1)
 
 
 
@@ -15,11 +15,11 @@ AVAILABILITY
 
 
 DESCRIPTION
-       v uses viminfo's list of recently edited files to open one quickly no matter
-       where you are in the filesystem.
+       v  uses  viminfo's list of recently edited files to open one quickly no
+       matter where you are in the filesystem.
 
-       By default, it will open the most recently edited file matching all  of  the
-       provided regular expressions.
+       By default, it will open the most recently edited file matching all  of
+       the provided regular expressions.
 
 
 OPTIONS
@@ -38,9 +38,17 @@ EXAMPLES
 
 
 NOTES
-       Shell variables, such as $, must be escaped if used in regular expressions.
+       Shell  variables, such as $, must be escaped if used in regular expres‐
+       sions.
 
-       You may find it useful to alias vl='v -l'
+       Behavior
+       The default behavior is to open the most recent file that  matches  the
+       search terms, even if there are multiple matches.
+
+       You  may  find  it  useful  to alias vl='v -l'. When there are multiple
+       matches, this will prompt for a choice, rather than editing  the  first
+       match.  The  author  is  still  not  sure  which behavior should be the
+       default, and has chosen one provisionally.
 
 
 SEE ALSO
@@ -50,4 +58,4 @@ SEE ALSO
 
 
 
-v                                  February 2011                               V(1)
+v                                February 2011                            V(1)

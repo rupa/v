@@ -39,7 +39,15 @@ provided regular expressions.
 .SH NOTES
 Shell variables, such as $, must be escaped if used in regular expressions.
 
-You may find it useful to alias vl='v -l'
+\fBBehavior\fR
+.br
+The default behavior is to open the most recent file that matches the search
+terms, even if there are multiple matches.
+
+You may find it useful to alias vl='v -l'. When there are multiple matches,
+this will prompt for a choice, rather than editing the first match. The author
+is still not sure which behavior should be the default, and has chosen one 
+provisionally.
 
 .SH SEE ALSO
 vim(1), regex(7)
