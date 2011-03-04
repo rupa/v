@@ -24,7 +24,7 @@ set -- "${fnd[@]}"
     exit
 }
 
-while read line; do
+while IFS=" " read line; do
     [ "${line:0:1}" = ">" ] || continue
     fl=${line:2}
     [ -f "$(eval echo $fl)" -o "$deleted" ] || continue
