@@ -7,16 +7,17 @@ usage="$(basename $0) [-a] [-l] [-[0-9]] [--debug] [--help] [regexes]"
 
 [ $1 ] || list=1
 
+fnd=()
 for x; do case $x in
     -a) deleted=1;;
     -l) list=1;;
     -[1-9]) edit=${x:1}; shift;;
     --help) echo $usage; exit;;
     --debug) vim=echo;;
-    --) shift; fnd="$fnd $*"; break;;
-    *) fnd="$fnd $x";;
+    --) shift; fnd+=("$@"); break;;
+    *) fnd+=("$x");;
 esac; shift; done
-set -- $fnd
+set -- "${fnd[@]}"
 
 [ -f "$1" ] && {
     "$vim" "$1"
