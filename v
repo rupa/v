@@ -10,7 +10,7 @@ usage="$(basename $0) [-a] [-l] [-[0-9]] [--debug] [--help] [regexes]"
 for x; do case $x in
     -a) deleted=1;;
     -l) list=1;;
-    -[0-9]) edit=${x:1}; shift;;
+    -[1-9]) edit=${x:1}; shift;;
     --help) echo $usage; exit;;
     --debug) vim=echo;;
     --) shift; fnd="$fnd $*"; break;;
