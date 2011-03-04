@@ -23,6 +23,7 @@ set -- $fnd
     exit
 }
 
+IFS=" " # only split on spaces as register lines may start  with ‘>’
 while read line; do
     [ "${line:0:1}" = ">" ] || continue
     fl=${line:2}
