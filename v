@@ -27,7 +27,7 @@ set -- "${fnd[@]}"
 while IFS=" " read line; do
     [ "${line:0:1}" = ">" ] || continue
     fl=${line:2}
-    [ -f "$(eval echo $fl)" -o "$deleted" ] || continue
+    [ -f "${fl/\~/$HOME/}" -o "$deleted" ] || continue
     match=1
     for x; do
         [[ "$fl" =~ $x ]] || match=
@@ -51,4 +51,4 @@ elif [ "$i" ]; then
 fi
 
 [ "$resp" ] || exit
-"$vim" "$(eval echo $resp)"
+"$vim" "${resp/\~/$HOME}"
