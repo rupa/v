@@ -1,7 +1,7 @@
 #!/bin/bash
 
-vim=vim
-viminfo=~/.viminfo
+[ $vim ] || vim=vim
+[ $viminfo ] || viminfo=~/.viminfo
 
 usage="$(basename $0) [-a] [-l] [-[0-9]] [--debug] [--help] [regexes]"
 
