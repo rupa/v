@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ $vim ] || vim=vim
+[ "$vim" ] || vim=vim
 [ $viminfo ] || viminfo=~/.viminfo
 
 usage="$(basename $0) [-a] [-l] [-[0-9]] [--debug] [--help] [regexes]"
@@ -51,4 +51,4 @@ elif [ "$i" ]; then
 fi
 
 [ "$resp" ] || exit
-"$vim" "${resp/\~/$HOME}"
+$vim "${resp/\~/$HOME}"
