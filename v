@@ -20,7 +20,7 @@ esac; shift; done
 set -- "${fnd[@]}"
 
 [ -f "$1" ] && {
-    "$vim" "$1"
+    $vim "$1"
     exit
 }
 
