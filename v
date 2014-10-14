@@ -11,7 +11,7 @@ fnd=()
 for x; do case $x in
     -a) deleted=1;;
     -l) list=1;;
-    -[1-9]) edit=${x:1}; shift;;
+    -[0-9]) edit=${x:1}; shift;;
     --help) echo $usage; exit;;
     --debug) vim=echo;;
     --) shift; fnd+=("$@"); break;;
@@ -38,16 +38,16 @@ while IFS=" " read line; do
 done < "$viminfo"
 
 if [ "$edit" ]; then
-    resp=${files[$edit]}
+    resp=${files[$((edit+1))]}
 elif [ "$i" = 1 -o "$list" = "" ]; then
     resp=${files[1]}
 elif [ "$i" ]; then 
     while [ $i -gt 0 ]; do
-         echo -e "$i\t${files[$i]}"
+         echo -e "$((i-1))\t${files[$i]}"
          i=$((i-1))
     done
     read -p '> ' CHOICE
-    resp=${files[$CHOICE]}
+    [ "$CHOICE" ] && resp=${files[$((CHOICE+1))]}
 fi
 
 [ "$resp" ] || exit

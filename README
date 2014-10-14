@@ -32,7 +32,7 @@ OPTIONS
 
 EXAMPLES
        v            list and choose from all files
-       v -1         reopen most recently edited file
+       v -0         reopen most recently edited file
        v foo bar    edit first file matching foo and bar
        v -l foo bar list and choose files matching foo and bar
 
