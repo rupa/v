@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+[ "$_V_VIM" ] && vim="$_V_VIM"
+[ "$_V_VIMINFO" ] && viminfo="$_V_VIMINFO"
+
 [ "$vim" ] || vim=vim
 [ $viminfo ] || viminfo=~/.viminfo
 
