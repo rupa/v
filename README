@@ -14,11 +14,17 @@ AVAILABILITY
        bash, vim
 
 
+INSTALLATION
+       Put v somewhere in $PATH (e.g. /usr/local/bin/).
+       For   the   manual   page,   put   v.1   somewhere  in  $MANPATH  (e.g.
+       /usr/local/man/man1/).
+
+
 DESCRIPTION
-       v  uses  viminfo's list of recently edited files to open one quickly no
+       v uses viminfo's list of recently edited files to open one  quickly  no
        matter where you are in the filesystem.
 
-       By default, it will open the most recently edited file matching all  of
+       By  default, it will open the most recently edited file matching all of
        the provided regular expressions.
 
 
@@ -38,16 +44,16 @@ EXAMPLES
 
 
 NOTES
-       Shell  variables, such as $, must be escaped if used in regular expres‐
+       Shell variables, such as $, must be escaped if used in regular  expres-
        sions.
 
        Behavior
-       The default behavior is to open the most recent file that  matches  the
+       The  default  behavior is to open the most recent file that matches the
        search terms, even if there are multiple matches.
 
-       You  may  find  it  useful  to alias vl='v -l'. When there are multiple
-       matches, this will prompt for a choice, rather than editing  the  first
-       match.  The  author  is  still  not  sure  which behavior should be the
+       You may find it useful to alias vl='v  -l'.  When  there  are  multiple
+       matches,  this  will prompt for a choice, rather than editing the first
+       match. The author is still  not  sure  which  behavior  should  be  the
        default, and has chosen one provisionally.
 
 
