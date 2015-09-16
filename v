@@ -24,6 +24,7 @@ set -- "${fnd[@]}"
     exit
 }
 
+i=
 while IFS=" " read line; do
     [ "${line:0:1}" = ">" ] || continue
     fl=${line:2}
