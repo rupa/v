@@ -7,7 +7,7 @@ NAME
 
 
 SYNOPSIS
-       v [-a] [-l] [-[0-9]] [--debug] [-h|--help] [regex1 regex2 ... regexn]
+       v [-a] [-l] [-[0-9]] [--debug] [-g|--gui] [-h|--help] [regex1 regex2 ... regexn]
 
 
 AVAILABILITY
@@ -33,6 +33,7 @@ OPTIONS
        -l           when multiple matches, show a list
        -[0-9]       edit nth most recent file
        --debug      dry run
+       -g, --gui    use vim GUI (pass -g to vim environment variable)
        -h, --help   show a brief help message
 
 

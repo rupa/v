@@ -4,7 +4,7 @@
 v \- z for vim
 
 .SH SYNOPSIS
-v [\-a] [\-l] [\-[0\-9]] [\-\-debug] [\-h|\-\-help] [regex1 regex2 ... regexn]
+v [\-a] [\-l] [\-[0\-9]] [\-\-debug] [\-g|\-\-gui] [\-h|\-\-help] [regex1 regex2 ... regexn]
 
 .SH AVAILABILITY
 bash, vim
@@ -30,6 +30,8 @@ provided regular expressions.
 \fB\-[0\-9]\fR       edit nth most recent file
 .br
 \fB\--debug\fR      dry run
+.br
+\fB\-g, --gui\fR    use vim GUI (pass -g to vim environment variable)
 .br
 \fB\-h, --help\fR   show a brief help message
 
