@@ -3,7 +3,7 @@
 [ "$vim" ] || vim=vim
 [ $viminfo ] || viminfo=~/.viminfo
 
-usage="$(basename $0) [-a] [-l] [-[0-9]] [--debug] [--help] [regexes]"
+usage="$(basename $0) [-a] [-l] [-[0-9]] [--debug] [-h|--help] [regexes]"
 
 [ $1 ] || list=1
 
@@ -12,7 +12,7 @@ for x; do case $x in
     -a) deleted=1;;
     -l) list=1;;
     -[0-9]) edit=${x:1}; shift;;
-    --help) echo $usage; exit;;
+    -h|--help) echo $usage; exit;;
     --debug) vim=echo;;
     --) shift; fnd+=("$@"); break;;
     *) fnd+=("$x");;

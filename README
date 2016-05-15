@@ -7,7 +7,7 @@ NAME
 
 
 SYNOPSIS
-       v [-a] [-l] [-[0-9]] [--debug] [--help] [regex1 regex2 ... regexn]
+       v [-a] [-l] [-[0-9]] [--debug] [-h|--help] [regex1 regex2 ... regexn]
 
 
 AVAILABILITY
@@ -33,7 +33,7 @@ OPTIONS
        -l           when multiple matches, show a list
        -[0-9]       edit nth most recent file
        --debug      dry run
-       --help       show a brief help message
+       -h, --help   show a brief help message
 
 
 EXAMPLES
@@ -64,4 +64,4 @@ SEE ALSO
 
 
 
-v                                February 2011                            V(1)
+v                                  May 2011                               V(1)
