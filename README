@@ -58,6 +58,11 @@ NOTES
        default, and has chosen one provisionally.
 
 
+ENVIRONMENT
+       vim           vim executable
+       viminfo       path to viminfo file
+
+
 SEE ALSO
        vim(1), regex(7)
 
