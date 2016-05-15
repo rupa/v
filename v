@@ -3,16 +3,17 @@
 [ "$vim" ] || vim=vim
 [ $viminfo ] || viminfo=~/.viminfo
 
-usage="$(basename $0) [-a] [-l] [-[0-9]] [--debug] [--help] [regexes]"
+usage="$(basename $0) [-a] [-l] [-[0-9]] [--debug] [-g|--gui] [-h|--help] [regexes]"
 
 [ $1 ] || list=1
 
 fnd=()
 for x; do case $x in
     -a) deleted=1;;
+    -g|--gui) vim="$vim -g";;
     -l) list=1;;
     -[0-9]) edit=${x:1}; shift;;
-    --help) echo $usage; exit;;
+    -h|--help) echo $usage; exit;;
     --debug) vim=echo;;
     --) shift; fnd+=("$@"); break;;
     *) fnd+=("$x");;
@@ -24,6 +25,7 @@ set -- "${fnd[@]}"
     exit
 }
 
+i=
 while IFS=" " read line; do
     [ "${line:0:1}" = ">" ] || continue
     fl=${line:2}
@@ -41,7 +43,7 @@ if [ "$edit" ]; then
     resp=${files[$((edit+1))]}
 elif [ "$i" = 1 -o "$list" = "" ]; then
     resp=${files[1]}
-elif [ "$i" ]; then 
+elif [ "$i" ]; then
     while [ $i -gt 0 ]; do
          echo -e "$((i-1))\t${files[$i]}"
          i=$((i-1))

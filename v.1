@@ -1,10 +1,10 @@
-.TH V "1" "February 2011" "v" "User Commands"
+.TH V "1" "May 2016" "v" "User Commands"
 
 .SH NAME
 v \- z for vim
 
 .SH SYNOPSIS
-v [\-a] [\-l] [\-[0\-9]] [\-\-debug] [\-\-help] [regex1 regex2 ... regexn]
+v [\-a] [\-l] [\-[0\-9]] [\-\-debug] [\-g|\-\-gui] [\-h|\-\-help] [regex1 regex2 ... regexn]
 
 .SH AVAILABILITY
 bash, vim
@@ -31,7 +31,9 @@ provided regular expressions.
 .br
 \fB\--debug\fR      dry run
 .br
-\fB\--help\fR       show a brief help message
+\fB\-g, --gui\fR    use vim GUI (pass -g to vim environment variable)
+.br
+\fB\-h, --help\fR   show a brief help message
 
 .SH EXAMPLES
 \fBv\fR            list and choose from all files
@@ -52,8 +54,13 @@ terms, even if there are multiple matches.
 
 You may find it useful to alias vl='v -l'. When there are multiple matches,
 this will prompt for a choice, rather than editing the first match. The author
-is still not sure which behavior should be the default, and has chosen one 
+is still not sure which behavior should be the default, and has chosen one
 provisionally.
+
+.SH ENVIRONMENT
+\fBvim\fR           vim executable
+.br
+\fBviminfo\fR       path to viminfo file
 
 .SH SEE ALSO
 vim(1), regex(7)
