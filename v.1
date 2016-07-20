@@ -4,7 +4,7 @@
 v \- z for vim
 
 .SH SYNOPSIS
-v [\-a] [\-l] [\-[0\-9]] [\-\-debug] [\-\-help] [regex1 regex2 ... regexn]
+v [\-a] [\-c] [\-l] [\-[0\-9]] [\-\-debug] [\-\-help] [regex1 regex2 ... regexn]
 
 .SH AVAILABILITY
 bash, vim
@@ -25,6 +25,8 @@ provided regular expressions.
 .SH OPTIONS
 \fB\-a\fR           don't skip deleted files
 .br
+\fB\-c\fR           restrict matches to subdirectories of the current dir
+.br
 \fB\-l\fR           when multiple matches, show a list
 .br
 \fB\-[0\-9]\fR       edit nth most recent file
@@ -39,6 +41,8 @@ provided regular expressions.
 \fBv -0\fR         reopen most recently edited file
 .br
 \fBv foo bar\fR    edit first file matching foo and bar
+.br
+\fBv -c foo bar\fR choose files in current dir matching foo and bar
 .br
 \fBv -l foo bar\fR list and choose files matching foo and bar
 

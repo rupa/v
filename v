@@ -3,13 +3,16 @@
 [ "$vim" ] || vim=vim
 [ $viminfo ] || viminfo=~/.viminfo
 
-usage="$(basename $0) [-a] [-l] [-[0-9]] [--debug] [--help] [regexes]"
+usage="$(basename $0) [-a] [-c] [-l] [-[0-9]] [--debug] [--help] [regexes]"
 
 [ $1 ] || list=1
+
+_pwd="$(command pwd)"
 
 fnd=()
 for x; do case $x in
     -a) deleted=1;;
+    -c) subdir=1; shift;;
     -l) list=1;;
     -[0-9]) edit=${x:1}; shift;;
     --help) echo $usage; exit;;
@@ -27,11 +30,18 @@ set -- "${fnd[@]}"
 while IFS=" " read line; do
     [ "${line:0:1}" = ">" ] || continue
     fl=${line:2}
-    [ -f "${fl/\~/$HOME/}" -o "$deleted" ] || continue
+    _fl="${fl/~\//$HOME/}"
+    [ -f "$_fl" -o "$deleted" ] || continue
     match=1
     for x; do
         [[ "$fl" =~ $x ]] || match=
     done
+    [ "$subdir" ] && {
+        case "$_fl" in
+          $_pwd*);;
+          *) match=;;
+        esac
+    }
     [ "$match" ] || continue
     i=$((i+1))
     files[$i]="$fl"

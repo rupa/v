@@ -7,7 +7,7 @@ NAME
 
 
 SYNOPSIS
-       v [-a] [-l] [-[0-9]] [--debug] [--help] [regex1 regex2 ... regexn]
+       v [-a] [-c] [-l] [-[0-9]] [--debug] [--help] [regex1 regex2 ... regexn]
 
 
 AVAILABILITY
@@ -30,6 +30,7 @@ DESCRIPTION
 
 OPTIONS
        -a           don't skip deleted files
+       -c           restrict matches to subdirectories of the current dir
        -l           when multiple matches, show a list
        -[0-9]       edit nth most recent file
        --debug      dry run
@@ -40,6 +41,7 @@ EXAMPLES
        v            list and choose from all files
        v -0         reopen most recently edited file
        v foo bar    edit first file matching foo and bar
+       v -c foo bar choose files in current dir matching foo and bar
        v -l foo bar list and choose files matching foo and bar
 
 
