@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Copyright (c) 2011 rupa deadwyler. Licensed under the WTFPL license, Version 2
 
 [ "$vim" ] || vim=vim
 [ $viminfo ] || viminfo=~/.viminfo
