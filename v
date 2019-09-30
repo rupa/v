@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # Copyright (c) 2011 rupa deadwyler. Licensed under the WTFPL license, Version 2
 
+[ "$_V_VIM" ] && vim="$_V_VIM"
+[ "$_V_VIMINFO" ] && viminfo="$_V_VIMINFO"
+
 [ "$vim" ] || vim=vim
 [ $viminfo ] || viminfo=~/.viminfo
 
