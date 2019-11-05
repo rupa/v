@@ -28,6 +28,7 @@ set -- "${fnd[@]}"
     exit
 }
 
+i=
 while IFS=" " read line; do
     [ "${line:0:1}" = ">" ] || continue
     fl=${line:2}
@@ -52,7 +53,7 @@ if [ "$edit" ]; then
     resp=${files[$((edit+1))]}
 elif [ "$i" = 1 -o "$list" = "" ]; then
     resp=${files[1]}
-elif [ "$i" ]; then 
+elif [ "$i" ]; then
     while [ $i -gt 0 ]; do
          echo -e "$((i-1))\t${files[$i]}"
          i=$((i-1))
